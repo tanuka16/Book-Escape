@@ -10,7 +10,7 @@
 }
 
 body{
-  font-family: 'Oswald', sans-serif !important;
+  font-family: 'Bree Serif', sans-serif !important;
   background: var(--mainWhite) !important;
   color: var(--mainDark) !important;
 }
@@ -28,4 +28,8 @@ body{
 
 .text-bright{
   color: var(--lightBlue)
+}
+
+nav {
+  background-color: #FF6347;
 }
