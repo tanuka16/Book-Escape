@@ -14,10 +14,9 @@ class App extends Component {
     return (
       // React Fragment tag allows to imitate the html tag, it will work as a parent container, which will be returned
       <React.Fragment>
-        <h3>hello from App</h3>
         <Navbar/>
         <Switch>
-          <Route path='/' component={ProductList}></Route>
+          <Route exact path='/' component={ProductList}></Route>
           <Route path='/details' component={Details}></Route>
           <Route path='/cart' component={Cart}></Route>
           <Route component={Default}></Route>
