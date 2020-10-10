@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter as Router} from 'react-router-dom';
+import {BookProvider} from './context';
 import * as serviceWorker from './serviceWorker';
-
+// BookProvider is the top component in this application
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <BookProvider>
+    <Router>
+      <App />
+    </Router>
+  </BookProvider>,
   document.getElementById('root')
 );
 
