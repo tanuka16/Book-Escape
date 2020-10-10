@@ -7,7 +7,7 @@ import {BookConsumer} from '../context';
 
 class ProductList extends Component {
   state={
-    product: []
+    product: storeProducts
   }
 
   render() {
@@ -20,7 +20,9 @@ class ProductList extends Component {
             <div className="row">
               <BookConsumer>
                 {value => {
-                  return <h1>{value}</h1>
+                  return value.products.map(product =>{
+                    return <ProductDetail key={product.id} product={product}/>
+                  })
                 }}
               </BookConsumer>
             </div>
