@@ -8,7 +8,7 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark px-sm-5">
+      <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
 
       <Link to="/">
         <img src={logo1} alt='store' className='navbar-brand' />
@@ -29,10 +29,20 @@ class Navbar extends Component {
           </ButtonContainer>
 
         </Link>
-      </nav>
+      </NavWrapper>
     );
   }
 
 }
+
+const NavWrapper = styled.nav`
+background: var(--mainBlue);
+.nav-link{
+  color:var(--mainWhite) !important;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+`
+
 
 export default Navbar;
