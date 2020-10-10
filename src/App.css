@@ -29,7 +29,3 @@ body{
 .text-bright{
   color: var(--lightBlue)
 }
-
-nav {
-  background-color: #FF6347;
-}
