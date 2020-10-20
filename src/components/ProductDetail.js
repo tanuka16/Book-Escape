@@ -6,13 +6,25 @@ import {ProductConsumer} from '../context';
 class ProductDetail extends Component {
 
   render() {
+    /* object */
+    const {id, title, img, price, inCart} = this.props.product;
     return (
-      <div>
-        <h3> Hello from ProductDetail</h3>
-      </div>
+      <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
+        <div className="card">
+          <div className="img-container p-5" onClick={console.log('clicked img container')}>
+
+            <Link to="/details">
+              <img src={img} alt="product-book" className="card-img-top"/>
+            </Link>
+          </div>
+        </div>
+      </ProductWrapper>
     );
   }
 
 }
+
+const ProductWrapper = styled.div``
+
 
 export default ProductDetail;
