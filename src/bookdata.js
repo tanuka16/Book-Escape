@@ -2,7 +2,7 @@ export const storeProducts = [
   {
     id: 1,
     title: "Fangirl",
-    img: "img/product-1.png",
+    img: "img/fangirl-1.png",
     price: 10,
     author: "Rainbow Rowell",
     info:
@@ -14,7 +14,7 @@ export const storeProducts = [
   {
     id: 2,
     title: "The Complete Software Developer's Career Guide",
-    img: "img/product-2.png",
+    img: "img/TCSDCG-2.png",
     price: 26.01,
     author: "John Sonmez",
     info:
@@ -26,7 +26,7 @@ export const storeProducts = [
   {
     id: 3,
     title: "Clean Code: A Handbook of Agile Software Craftsmanship",
-    img: "img/product-3.png",
+    img: "img/CleanCode-3.png",
     price: 44.99,
     author: "htc",
     info:
@@ -38,7 +38,7 @@ export const storeProducts = [
   {
     id: 4,
     title: "Women Who Run with the Wolves: Myths and Stories of the Wild Woman Archetype",
-    img: "img/product-4.png",
+    img: "img/WomenWhoRunWithTheWollves-4.png",
     price: 18,
     author: "Clarissa Pinkola Estés Phd",
     info:
@@ -50,7 +50,7 @@ export const storeProducts = [
   {
     id: 5,
     title: "Behold the Dreamers (Oprah's Book Club)",
-    img: "img/product-5.png",
+    img: "img/BeholdtheDreamers-5.png",
     price: 24,
     author: "Imbolo Mbue",
     info:
@@ -62,7 +62,7 @@ export const storeProducts = [
   {
     id: 6,
     title: "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
-    img: "img/product-6.png",
+    img: "img/AtomicHabits-6.png",
     price: 17,
     author: "James Clear",
     info:
@@ -74,7 +74,7 @@ export const storeProducts = [
   {
     id: 7,
     title: "Leonardo da Vinci",
-    img: "img/product-7.png",
+    img: "img/LeonardodaVinci-7.png",
     price: 19.99,
     author: "Walter Isaacson",
     info:
@@ -85,8 +85,8 @@ export const storeProducts = [
   },
   {
     id: 8,
-    title: "The Alchemist ",
-    img: "img/product-8.png",
+    title: "The Alchemist",
+    img: "img/TheAlchemist-8.png",
     price: 13.99,
     author: "Paulo Coelho",
     info:
@@ -100,7 +100,7 @@ export const storeProducts = [
 export const detailProduct = {
   id: 1,
   title: "Brown Girl, Brownstones",
-  img: "img/product-1.png",
+  img: "img/BrownGirlBrownstones-1.png",
   price: 8.95,
   author: "Paule Marshall",
   info:
