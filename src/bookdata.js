@@ -37,7 +37,7 @@ export const storeProducts = [
   },
   {
     id: 4,
-    title: "Women Who Run with the Wolves: Myths and Stories of the Wild Woman Archetype",
+    title: "Women Who Run with the Wolves",
     img: "img/WomenWhoRunWithTheWollves-4.png",
     price: 18,
     author: "Clarissa Pinkola Estés Phd",
@@ -99,10 +99,10 @@ export const storeProducts = [
 
 export const detailProduct = {
   id: 1,
-  title: "Brown Girl, Brownstones",
+  title: "Dreamland of Books",
   img: "img/BrownGirlBrownstones-1.png",
   price: 8.95,
-  author: "Paule Marshall",
+  author: "Amazon books",
   info:
     "'An unforgettable novel, written with pride and anger, with rebellion and tears.' — Herald Tribune Book Review'Passionate, compelling . . . an impressive accomplishment.' — Saturday Review' Remarkable for its courage, its color, and its natural control.' — The New Yorker Selina's mother wants to stay in Brooklyn and earn enough money to buy a brownstone row house, but her father dreams only of returning to his island home. Torn between a romantic nostalgia for the past and a driving ambition for the future, Selina also faces the everyday burdens of poverty and racism. Written by and about an African-American woman, this coming-of-age story unfolds during the Depression and World War II. Its setting — a close-knit community of immigrants from Barbados — is drawn from the author's own experience, as are the lilting accents and vivid idioms of the characters' speech. Paule Marshall's 1959 novel was among the first to portray the inner life of a young female African-American, as well as depicting the cross-cultural conflict between West Indians and American blacks. It remains a vibrant, compelling tale of self-discovery.",
   inCart: false,
