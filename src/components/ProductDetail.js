@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import {ProductConsumer} from '../context';
+import {BookConsumer} from '../context';
 import PropTypes from 'prop-types';
 
 class ProductDetail extends Component {
@@ -13,8 +13,8 @@ class ProductDetail extends Component {
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
 
       <div className="card">
-        <ProductConsumer>
-        // write as a function - access to value handle method
+        <BookConsumer>
+        {/* write as a function - access to value handle method */}
           {(value) => (
             <div className="img-container p-5"
                 onClick={() =>
@@ -45,7 +45,7 @@ class ProductDetail extends Component {
           )}
 
 
-          </ProductConsumer>
+          </BookConsumer>
 
           {/* card footer */}
           <div className="card-footer d-flex justify-content-between">
