@@ -54,10 +54,10 @@ class Details extends Component {
                 {/* buttons */}
                 <div>
                   <Link to="/">
-                    <ButtonContainer>back to products</ButtonContainer>
+                  <ButtonContainer>back to products</ButtonContainer>
                   </Link>
                   <ButtonContainer
-                    cart 
+                    cart
                     disabled={inCart ? true : false}
                     onClick={() => {
                       value.addToCart(id);
