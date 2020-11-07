@@ -13,7 +13,10 @@ class BookProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart: []
+    cart: [],
+    //model properties are for the product popup
+    modelOpen: true,
+    modalProduct: detailProduct
   }
 
   componentDidMount(){
@@ -45,26 +48,41 @@ class BookProvider extends Component {
     })
   }
   addToCart = (id) => {
-    let tempProducts = [...this.state.products]
-    const index = tempProducts.indexOf(this.getItem(id));
-    const product = tempProducts[index];
-    product.inCart = true;
-    product.count = 1;
-    const price = product.price;
-    product.total = price;
-  this.setState(() => {
-    return {products: tempProducts, cart:[...this.state.cart,
-    product]}
-  }, () => {console.log(this.state);
-  });
+      let tempProducts = [...this.state.products]
+      const index = tempProducts.indexOf(this.getItem(id));
+      const product = tempProducts[index];
+      product.inCart = true;
+      product.count = 1;
+      const price = product.price;
+      product.total = price;
+    this.setState(() => {
+      return {products: tempProducts, cart:[...this.state.cart,
+      product]}
+      }, () => {console.log(this.state);
+    });
   };
+  //call the openModel everytime we click on the icon
+  // then we'll pass the specific product with specific id into a modalProduct
+  openModal = id =>{
+    const product = this.getItem(id);
+    this.setState(() => {
+      return {modalProduct:product, modalOpen:true}
+    })
+  }
+  closeModal = () =>{
+    this.setState(() => {
+      return {modalOpen:false}
+    })
+  }
   render() {
     return (
       <BookContext.Provider
       value={{
         ...this.state,
         handleDetail:this.handleDetail,
-        addToCart:this.addToCart
+        addToCart:this.addToCart,
+        openModal:this.openModal,
+        closeModal:this.closeModal
       }}>
         {this.props.children}
       </BookContext.Provider>
