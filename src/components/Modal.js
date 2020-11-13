@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from 'styled-components';
+import styled from 'styled-components';
 import {BookConsumer} from '../context';
 import {ButtonContainer} from './Button';
 import {Link} from 'react-router-dom';
@@ -35,9 +35,17 @@ class Modal extends Component {
   }
 
 }
-const ModalContainer = style.div`
-
-`
+const ModalContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  buttom: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 
 
