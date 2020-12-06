@@ -15,7 +15,7 @@ class BookProvider extends Component {
     detailProduct: detailProduct,
     cart: [],
     //model properties are for the product popup
-    modelOpen: true,
+    modelOpen: false,
     modalProduct: detailProduct
   }
 
