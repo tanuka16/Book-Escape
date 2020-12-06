@@ -16,7 +16,11 @@ class BookProvider extends Component {
     cart: [],
     //model properties are for the product popup
     modelOpen: false,
-    modalProduct: detailProduct
+    modalProduct: detailProduct,
+    // in cart properties, initailized to 0
+    cartSubTotal: 0,
+    cartTax: 0,
+    cartTotal: 0
   }
 
   componentDidMount(){
@@ -74,15 +78,41 @@ class BookProvider extends Component {
       return {modalOpen:false}
     })
   }
+
+  // methods for in cart components
+  //this is increment method
+  imcrement = (id) => {
+    console.log('this is increment method');
+  }
+  // this is increment method
+  decrement = (id) => {
+    console.log('this is decrement method');
+  }
+  // remove method; need the id so we can work with the value
+  removeItem = (id) => {
+    console.log('item removed');
+  }
+  // cart clear method
+  clearCart = () =>{
+    console.log("clear the cart");
+  }
+
+
   render() {
     return (
       <BookContext.Provider
+      // this.state is included in the value
       value={{
         ...this.state,
         handleDetail:this.handleDetail,
         addToCart:this.addToCart,
         openModal:this.openModal,
         closeModal:this.closeModal
+        // get the methods in a value for the in cart component 
+        increment: this.increment,
+        decrement: this.decrement,
+        removeItem: this.removeItem,
+        clearCart: this.clearCart
       }}>
         {this.props.children}
       </BookContext.Provider>
