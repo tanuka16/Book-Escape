@@ -1,6 +1,7 @@
 
-## Book Dreamland
+## Enlightened Escape
 
+Enlightened Escape is an e-commerce book website.
 
 
 ### Stacks
