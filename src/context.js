@@ -62,8 +62,11 @@ class BookProvider extends Component {
     this.setState(() => {
       return {products: tempProducts, cart:[...this.state.cart,
       product]}
-      }, () => {console.log(this.state);
-    });
+      },
+      () => {
+        this.addTotals()                          //loop through all item in the cart by calling the addTotals() function
+      }
+    );
   };
   //call the openModel everytime we click on the icon
   // then we'll pass the specific product with specific id into a modalProduct
@@ -81,7 +84,7 @@ class BookProvider extends Component {
 
   // methods for in cart components
   //this is increment method
-  imcrement = (id) => {
+  increment = (id) => {
     console.log('this is increment method');
   }
   // this is increment method
@@ -97,6 +100,21 @@ class BookProvider extends Component {
     console.log("clear the cart");
   }
 
+  addTotals = () =>{
+    let subTotal = 0
+    this.state.cart.map(item => (subTotal += item.total))
+    //add tax -> 10%
+    let tempTax = subTotal * 0.1
+    let tax = parseFloat(tempTax.toFixed(2))
+    let total = subTotal + tax
+    this.setState(() => {
+      return {
+        cartSubTotal: subTotal,
+        cartTax: tax,
+        cartTotal: total
+      }
+    })
+  }
 
   render() {
     return (
@@ -107,8 +125,8 @@ class BookProvider extends Component {
         handleDetail:this.handleDetail,
         addToCart:this.addToCart,
         openModal:this.openModal,
-        closeModal:this.closeModal
-        // get the methods in a value for the in cart component 
+        closeModal:this.closeModal,
+        // get the methods in a value for the in cart component
         increment: this.increment,
         decrement: this.decrement,
         removeItem: this.removeItem,
