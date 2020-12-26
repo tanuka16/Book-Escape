@@ -85,19 +85,81 @@ class BookProvider extends Component {
   // methods for in cart components
   //this is increment method
   increment = (id) => {
-    console.log('this is increment method');
+    let tempCart = [...this.state.cart]
+    const selectedProduct = tempCart.find(item => item.id === id)
+
+    const index = tempCart.indexOf(selectedProduct)
+    const product = tempCart[index]           //access to the specific product
+
+    product.count = product.count + 1
+    product.total = product.count * product.price
+
+    // looking for the call back function
+    this.setState(() => {
+      return {
+        cart: [...tempCart]}                 //change the product total
+      }, () => {
+        this.addTotals()                     //its important to run this as a call back function, so the total will be counted exactly when they're changed
+      })
+
   }
   // this is increment method
   decrement = (id) => {
-    console.log('this is decrement method');
+    let tempCart = [...this.state.cart]
+    const selectedProduct = tempCart.find(item => item.id === id)
+
+    const index = tempCart.indexOf(selectedProduct)
+    const product = tempCart[index]
+
+    product.count = product.count - 1
+
+    if(product.count === 0){
+      this.removeItem(id)
+    }else {
+      product.total = product.count * product.price
+
+      this.setState(() => {
+        return {
+          cart: [...tempCart]}                 //change the product total
+        }, () => {
+          this.addTotals()                     //its important to run this as a call back function, so the total will be counted exactly when they're changed
+        })
+    }
   }
   // remove method; need the id so we can work with the value
   removeItem = (id) => {
-    console.log('item removed');
+    let tempProducts = [...this.state.products]
+    let tempCart = [...this.state.cart]
+
+    tempCart = tempCart.filter(item => item.id !== id);
+
+    const index = tempProducts.indexOf(this.getItem(id));
+    let removeProduct = tempProducts[index]
+    removeProduct.inCart = false;
+    removeProduct.count = 0;
+    removeProduct.total = 0;
+
+    this.setState(
+      ()=> {
+        return{
+          cart: [...tempCart],
+          products: [...tempProducts]
+        }
+      }
+    )
+
   }
   // cart clear method
   clearCart = () =>{
-    console.log("clear the cart");
+    this.setState(() => {
+      return {cart: []}
+    }, () => {
+      //this will give new copies of all the objects (products) so setting it to default
+      this.setProducts()
+      this.addTotals()                //everytime we remove item from the cart, it will be move back to cart
+    })
+
+
   }
 
   addTotals = () =>{
