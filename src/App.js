@@ -12,7 +12,7 @@ import Modal from './components/Modal';
 class App extends Component {
   render() {
     return (
-      // React Fragment tag allows to imitate the html tag, it will work as a parent container, which will be returned
+      
       <React.Fragment>
         <Navbar/>
         <Switch>
@@ -21,8 +21,7 @@ class App extends Component {
           <Route path='/cart' component={Cart}></Route>
           <Route component={Default}></Route>
         </Switch>
-         {/*outside Switch because we don't need a route for the modal, it just a popup; now modal component is being rendered*/}
-        <Modal />
+        <Modal/>
 
       </React.Fragment>
     );
@@ -30,3 +29,6 @@ class App extends Component {
 }
 
 export default App;
+
+{/* React Fragment tag allows to imitate the html tag, it will work as a parent container, which will be returned */}
+{/*outside Switch because we don't need a route for the modal, it just a popup; now modal component is being rendered*/}

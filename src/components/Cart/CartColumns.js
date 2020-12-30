@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function CartColumns(){
   return(
-    //container fluid takes up the wjolte screen
+
     <div className="container-fluid text-center d-none d-lg-block">
       <div className="row">
 
@@ -33,3 +33,4 @@ export default function CartColumns(){
     </div>
   )
 }
+{/*container fluid takes up the whole screen*/}

@@ -6,10 +6,7 @@ import Title from './Title'
 import {BookConsumer} from '../context';
 
 class ProductList extends Component {
-  /* state={
-  //   product: storeProducts
-   }
-   */
+
   render() {
     return (
       <React.Fragment>

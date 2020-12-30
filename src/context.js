@@ -181,14 +181,14 @@ class BookProvider extends Component {
   render() {
     return (
       <BookContext.Provider
-      // this.state is included in the value
+       {/*this.state is included in the value*/}
       value={{
         ...this.state,
         handleDetail:this.handleDetail,
         addToCart:this.addToCart,
         openModal:this.openModal,
         closeModal:this.closeModal,
-        // get the methods in a value for the in cart component
+        {/* get the methods in a value for the in cart component*/}
         increment: this.increment,
         decrement: this.decrement,
         removeItem: this.removeItem,
