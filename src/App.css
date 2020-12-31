@@ -1,6 +1,7 @@
 :root{
   /* Tomato */
   --mainBlue: #2a2a72;
+  --mainOrange: #FFA500;
   /* CornflowerBlue */
   --lightBlue: #009ffd;
   --mainWhite: #f3f3f3;
@@ -16,7 +17,7 @@ body{
 }
 
 .text-title{
-  font-family: 'Noto Sans SC', cursive;
+  font-family: 'Helvetica';
   font-weight: bold !important;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
