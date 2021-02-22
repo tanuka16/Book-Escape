@@ -64,7 +64,7 @@ class BookProvider extends Component {
       product]}
       },
       () => {
-        this.addTotals()                          //loop through all item in the cart by calling the addTotals() function
+        this.addTotals();                          //loop through all item in the cart by calling the addTotals() function
       }
     );
   };
@@ -97,7 +97,7 @@ class BookProvider extends Component {
     // looking for the call back function
     this.setState(() => {
       return {
-        cart: [...tempCart]}                 //change the product total
+        cart:[...tempCart]}                 //change the product total
       }, () => {
         this.addTotals()                     //its important to run this as a call back function, so the total will be counted exactly when they're changed
       })
@@ -165,10 +165,10 @@ class BookProvider extends Component {
   addTotals = () =>{
     let subTotal = 0
     this.state.cart.map(item => (subTotal += item.total))
-    //add tax -> 10%
-    let tempTax = subTotal * 0.1
-    let tax = parseFloat(tempTax.toFixed(2))
-    let total = subTotal + tax
+
+    const tempTax = subTotal * 0.1;
+    const tax = parseFloat(tempTax.toFixed(2));
+    const total = subTotal + tax
     this.setState(() => {
       return {
         cartSubTotal: subTotal,
@@ -181,14 +181,13 @@ class BookProvider extends Component {
   render() {
     return (
       <BookContext.Provider
-      // this.state is included in the value
       value={{
         ...this.state,
         handleDetail:this.handleDetail,
         addToCart:this.addToCart,
         openModal:this.openModal,
         closeModal:this.closeModal,
-        // get the methods in a value for the in cart component
+
         increment: this.increment,
         decrement: this.decrement,
         removeItem: this.removeItem,
@@ -204,3 +203,5 @@ class BookProvider extends Component {
 const BookConsumer = BookContext.Consumer;
 
 export {BookProvider, BookConsumer};
+
+{/* get the methods in a value for the in cart component*/}

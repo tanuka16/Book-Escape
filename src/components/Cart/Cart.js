@@ -22,7 +22,8 @@ class Cart extends Component {
                   <CartColumns/>
                   {/*passing value as props; now we've access to all the items in the value*/}
                   <CartList value={value}/>
-                  <CartTotals value={value}/>
+                  <CartTotals value={value} history={this.props.history}/>
+
                 </React.Fragment>
               )
             }else{

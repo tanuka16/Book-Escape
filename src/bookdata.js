@@ -13,9 +13,9 @@ export const storeProducts = [
   },
   {
     id: 2,
-    title: "The Complete Software Developer's Career Guide",
+    title: "Complete Software Developer's Career Guide",
     img: "img/TCSDCG-2.png",
-    price: 26.01,
+    price: 26,
     author: "John Sonmez",
     info:
       "Early in his software developer career, John Sonmez discovered that technical knowledge alone isn't enough to break through to the next income level - developers need 'soft skills' like the ability to learn new technologies just in time, communicate clearly with management and consulting clients, negotiate a fair hourly rate, and unite teammates and coworkers in working toward a common goal. As John invested in these skills his career took off, and he became a highly paid, highly sought-after developer and consultant. Today John helps more than 1.4 million programmers every year to increase their income by developing this unique blend of skills. 'If you're a developer, green or a veteran, you owe it to yourself to read The Complete Software Developers Career Guide.' - Jason Down, Platform Developer, Ontario, Canada",
@@ -25,9 +25,9 @@ export const storeProducts = [
   },
   {
     id: 3,
-    title: "Clean Code: A Handbook of Agile Software Craftsmanship",
+    title: "Clean Code: Agile Software Craftsmanship",
     img: "img/CleanCode-3.png",
-    price: 44.99,
+    price: 45,
     author: "htc",
     info:
       "Clean Code is divided into three parts. The first describes the principles, patterns, and practices of writing clean code. The second part consists of several case studies of increasing complexity. Each case study is an exercise in cleaning up code—of transforming a code base that has some problems into one that is sound and efficient. The third part is the payoff: a single chapter containing a list of heuristics and “smells” gathered while creating the case studies. The result is a knowledge base that describes the way we think when we write, read, and clean code.",
@@ -49,7 +49,7 @@ export const storeProducts = [
   },
   {
     id: 5,
-    title: "Behold the Dreamers (Oprah's Book Club)",
+    title: "Behold the Dreamers",
     img: "img/BeholdtheDreamers-5.png",
     price: 24,
     author: "Imbolo Mbue",
@@ -61,7 +61,7 @@ export const storeProducts = [
   },
   {
     id: 6,
-    title: "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+    title: "Atomic Habits",
     img: "img/AtomicHabits-6.png",
     price: 17,
     author: "James Clear",
@@ -75,7 +75,7 @@ export const storeProducts = [
     id: 7,
     title: "Leonardo da Vinci",
     img: "img/LeonardodaVinci-7.png",
-    price: 19.99,
+    price: 19,
     author: "Walter Isaacson",
     info:
       "Based on thousands of pages from Leonardo da Vinci’s astonishing notebooks and new discoveries about his life and work, Walter Isaacson “deftly reveals an intimate Leonardo” (San Francisco Chronicle) in a narrative that connects his art to his science. He shows how Leonardo’s genius was based on skills we can improve in ourselves, such as passionate curiosity, careful observation, and an imagination so playful that it flirted with fantasy. He produced the two most famous paintings in history, The Last Supper and the Mona Lisa. With a passion that sometimes became obsessive, he pursued innovative studies of anatomy, fossils, birds, the heart, flying machines, botany, geology, and weaponry. He explored the math of optics, showed how light rays strike the cornea, and produced illusions of changing perspectives in The Last Supper. His ability to stand at the crossroads of the humanities and the sciences, made iconic by his drawing of Vitruvian Man, made him history’s most creative genius.",
@@ -87,7 +87,7 @@ export const storeProducts = [
     id: 8,
     title: "The Alchemist",
     img: "img/TheAlchemist-8.png",
-    price: 13.99,
+    price: 13,
     author: "Paulo Coelho",
     info:
       "Combining magic, mysticism, wisdom and wonder into an inspiring tale of self-discovery, The Alchemist has become a modern classic, selling millions of copies around the world and transforming the lives of countless readers across generations. Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined. Santiago's journey teaches us about the essential wisdom of listening to our hearts, of recognizing opportunity and learning to read the omens strewn along life's path, and, most importantly, to follow our dreams.",
@@ -101,7 +101,7 @@ export const detailProduct = {
   id: 1,
   title: "Dreamland of Books",
   img: "img/BrownGirlBrownstones-1.png",
-  price: 8.95,
+  price: 8,
   author: "Amazon books",
   info:
     "'An unforgettable novel, written with pride and anger, with rebellion and tears.' — Herald Tribune Book Review'Passionate, compelling . . . an impressive accomplishment.' — Saturday Review' Remarkable for its courage, its color, and its natural control.' — The New Yorker Selina's mother wants to stay in Brooklyn and earn enough money to buy a brownstone row house, but her father dreams only of returning to his island home. Torn between a romantic nostalgia for the past and a driving ambition for the future, Selina also faces the everyday burdens of poverty and racism. Written by and about an African-American woman, this coming-of-age story unfolds during the Depression and World War II. Its setting — a close-knit community of immigrants from Barbados — is drawn from the author's own experience, as are the lilting accents and vivid idioms of the characters' speech. Paule Marshall's 1959 novel was among the first to portray the inner life of a young female African-American, as well as depicting the cross-cultural conflict between West Indians and American blacks. It remains a vibrant, compelling tale of self-discovery.",
